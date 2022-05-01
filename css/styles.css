@@ -62,7 +62,6 @@ button {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 2px solid red;
 }
 .header {
   border-bottom: 1px solid #ececec;
@@ -676,6 +675,80 @@ footer {
   background-color: var(--accent-color);
   fill: var(--primary-white-color);
 }
+.sign-form {
+  margin-left: 93px;
+}
+
+.sign-label {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  display: block;
+  margin-bottom: 20px;
+
+}
+
+.sign-input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  padding-left: 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sign-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.signup-field {
+display: flex;
+justify-content: baseline;
+}
+
+.sign-button {
+  position: relative;
+  margin-left: 12px;
+  width: 200px;
+  height: 50px;
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 0;
+ 
+}
+.sign-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 29px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--primary-white-color);
+
+}
+
+.sign-icon {
+  fill: var(--primary-white-color);
+  margin-left: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 138px;
+
+ 
+}
+
 .backdrop {
   position: fixed;
   width: 100%;
@@ -718,6 +791,11 @@ footer {
   height: 18px;
   right: 5px;
   top: 5px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-icon:hover,
+.modal-icon:focus {
+fill: var(--accent-color);
 }
 .is-hidden {
   opacity: 0;
@@ -734,7 +812,7 @@ footer {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 .modal-input {
   width: 448px;
@@ -746,12 +824,27 @@ footer {
   background-color: transparent;
   padding-left: 38px;
   margin-bottom: 0;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input:focus {
+border-color: var(--accent-color);
+}
+.modal-input:focus + .form-icon {
+  fill: var(--accent-color);
 }
 .modal-label {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--secondary-text-color);
+  margin-bottom: 4px;
+  display: block;
+}
+.modal-button-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .modal-button {
   width: 200px;
@@ -770,11 +863,72 @@ footer {
   color: #ffffff;
 }
 .modal-field {
-  position: relative;
   margin-bottom: 10px;
+ 
+}
+.input-wrap {
+  position: relative;
 }
 .form-icon {
   position: absolute;
   left: 12px;
-  top: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-comment {
+  width: 100%;
+  height: 120px;;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: transparent;
+  padding-left: 16px;
+  margin-bottom: 0;
+  padding-top: 12px;
+  resize: none;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+ .modal-comment:focus {
+   border-color: var(--accent-color);
+ }
+ .checkbox-label {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1),
+
+ }
+
+
+ .checkbox-span {
+  color: var(--accent-color);
+  text-decoration: underline;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+ }
+
+ .checkbox-label::before {
+   content: "";
+   display: block;
+   width: 16px;
+   height: 15px;
+   border: 2px solid var(--primary-text-color);
+   border-radius: 3px;
+   margin-right: 7px;
+ }
+ .modal-checkbox:checked + .checkbox-label::before {
+   background-color: var(--accent-color);
+   border: none;
+   background-image: url(../images/icon-check.svg);
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+
+ }
