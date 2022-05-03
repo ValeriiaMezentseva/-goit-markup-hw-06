@@ -497,8 +497,8 @@
               placeholder="E-mail"
             />
             <button type="submit" class="sign-button">
-              <span class="sign-text"> Подписаться </span>
-              <svg class="sign-icon" width="24" height="24">
+              <span class="sign-button__text"> Подписаться </span>
+              <svg class="sign-button__icon" width="24" height="24">
                 <use href="./images/symbol-defs.svg#icon-send"></use>
               </svg>
             </button>
@@ -573,7 +573,7 @@
               id="user-text"
             ></textarea>
           </div>
-          <div class="modal-field">
+          <div class="modal-field modal-field--indent">
             <input
               type="checkbox"
               id="privacy-check"
@@ -582,7 +582,7 @@
             />
             <label for="privacy-check" class="checkbox-label">
               Соглашаюсь с рассылкой и принимаю
-              <span class="checkbox-span"> Условия договора </span>
+              <a class="checkbox-link"> Условия договора </a>
             </label>
           </div>
           <div class="modal-button-wrap">
