@@ -875,7 +875,7 @@ border-color: var(--accent-color);
 
 .modal-field--indent {
   margin-bottom: 30px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .modal-comment {
   display: block;
